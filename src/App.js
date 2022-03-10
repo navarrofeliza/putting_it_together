@@ -1,28 +1,36 @@
 import React from "react";
 import "./App.css";
-
-import PersonComponent from "./components/MyNewComponent";
-var peopleArr = [
-  { firstName: "Jane", lastName: "Doe", age: 45, hairColor: "Black" },
-  { firstName: "John", lastName: "Smith", age: 88, hairColor: "Brown" },
-  { firstName: "Millard", lastName: "Fillmore", age: 50, hairColor: "Brown" },
-  { firstName: "Maria", lastName: "Smith", age: 62, hairColor: "Brown" },
-];
+import PuttingItTogether from "./components/MyNewComponent";
 
 function App() {
   return (
     <div className="App">
-      {peopleArr.map((person) => {
-        return (
-          <PersonComponent
-            firstName={person.firstName}
-            lastName={person.lastName}
-            age={person.age}
-            hairColor={person.hairColor}
-          />
-        );
-      })}
+      <PuttingItTogether
+        firstName="Jane"
+        lastName="Doe"
+        age={45}
+        hairColor="Black"
+      />
+      <PuttingItTogether
+        firstName="John"
+        lastName="Smith"
+        age={88}
+        hairColor="Brown"
+      />
+      <PuttingItTogether
+        firstName="Walter"
+        lastName="White"
+        age={50}
+        hairColor="None"
+      />
+      <PuttingItTogether
+        firstName="Vox"
+        lastName="Akuma"
+        age={32}
+        hairColor="Black"
+      />
     </div>
   );
 }
+
 export default App;
